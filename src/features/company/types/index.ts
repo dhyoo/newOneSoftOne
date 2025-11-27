@@ -35,6 +35,7 @@ export interface PhilosophyData {
 export interface BusinessArea {
     title: string;
     desc: string;
+    icon: string;
 }
 
 export interface BusinessData {

@@ -28,3 +28,5 @@ import companyIntroImage from '../assets/company_intro.jpg';
 
 이미지가 없어도 자동으로 그라데이션 배경이 표시됩니다.
 
+
+

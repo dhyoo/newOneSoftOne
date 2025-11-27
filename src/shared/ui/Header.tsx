@@ -17,9 +17,9 @@ export function Header() {
                 <div className="flex justify-between items-center h-20">
                     {/* Logo */}
                     <Link to="/" className="flex items-center -ml-2 md:-ml-4">
-                        <img 
-                            src={logoCi} 
-                            alt="SoftOne" 
+                        <img
+                            src={logoCi}
+                            alt="SoftOne"
                             className="h-10 md:h-12 object-contain"
                         />
                     </Link>
@@ -63,6 +63,17 @@ export function Header() {
                                 )}
                             </div>
                         ))}
+                        {/* AG Grid Link (Temporary) */}
+                        <Link
+                            to="/ag-grid"
+                            className={`flex items-center text-sm font-medium transition-colors py-2
+                                ${location.pathname === '/ag-grid'
+                                    ? 'text-primary'
+                                    : 'text-slate-600 hover:text-primary'
+                                }`}
+                        >
+                            AG Grid
+                        </Link>
                     </nav>
 
                     {/* Mobile Menu Button */}
