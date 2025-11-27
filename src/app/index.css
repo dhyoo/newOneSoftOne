@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+/* 공통 스타일 파일 import */
+@import "../shared/styles/theme.css";
+@import "../shared/styles/utilities.css";
+@import "../shared/styles/common.css";
+@import "../shared/styles/company-common.css";
+
+@theme {
+  --color-primary: #0A67B2;
+  --color-secondary: #1C94D2;
+}
+
+:root {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--color-slate-900);
+  background-color: var(--color-white);
+}

@@ -1,0 +1,695 @@
+/**
+ * 전체 프로젝트 공통 스타일 클래스
+ * 모든 feature에서 사용 가능한 공통 패턴
+ */
+
+/* ============================================
+   컨텐츠 박스 (모든 페이지 공통)
+   ============================================ */
+.content-box {
+  background-color: white;
+  border-radius: var(--radius-2xl);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-slate-100);
+  min-height: 400px;
+}
+
+/* ============================================
+   컨테이너 패턴 (전체 공통)
+   ============================================ */
+.container-center-sm {
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-center-md {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-center-lg {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-section {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ============================================
+   섹션 헤더 (전체 공통)
+   ============================================ */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header-lg {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header-centered {
+  text-align: center;
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-900);
+}
+
+.section-title-lg {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-900);
+}
+
+.section-title-md {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-900);
+}
+
+.section-subtitle {
+  color: var(--color-slate-600);
+  font-size: var(--font-size-lg);
+}
+
+/* ============================================
+   텍스트 스타일 (전체 공통)
+   ============================================ */
+.text-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-900);
+  line-height: var(--line-height-tight);
+}
+
+.text-title-md {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-900);
+}
+
+.text-body {
+  color: var(--color-slate-600);
+  line-height: var(--line-height-relaxed);
+}
+
+.text-body-lg {
+  color: var(--color-slate-600);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+}
+
+.text-body-pre {
+  color: var(--color-slate-600);
+  line-height: var(--line-height-relaxed);
+  white-space: pre-line;
+}
+
+/* ============================================
+   그리드 레이아웃 (전체 공통)
+   ============================================ */
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .grid-responsive {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.grid-responsive-2 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-responsive-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.grid-responsive-3 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grid-responsive-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.grid-responsive-4 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .grid-responsive-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-responsive-4 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* ============================================
+   카드 스타일 (전체 공통)
+   ============================================ */
+.card {
+  background-color: white;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-slate-200);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card-lg {
+  background-color: white;
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--color-slate-200);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.card-lg:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.card-padding {
+  padding: 1.5rem;
+}
+
+.card-padding-lg {
+  padding: 2rem;
+}
+
+/* ============================================
+   배경 박스 (전체 공통)
+   ============================================ */
+.bg-box {
+  background-color: var(--color-slate-50);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+}
+
+.bg-box-blue {
+  background-color: rgba(239, 246, 255, 0.5);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+}
+
+.bg-box-lg {
+  background-color: var(--color-slate-50);
+  border-radius: var(--radius-2xl);
+  padding: 2rem;
+}
+
+/* 배경 박스 변형: 흰색 배경 아이템 */
+.bg-box-item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============================================
+   아이콘 컨테이너 (전체 공통)
+   ============================================ */
+.icon-box {
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--radius-xl);
+  background-color: rgb(239 246 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.icon-box-lg {
+  width: 5rem;
+  height: 5rem;
+  border-radius: var(--radius-xl);
+  background-color: rgb(239 246 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* icon-box-lg 변형: 흰색 배경 */
+.icon-box-lg-white {
+  width: 5rem;
+  height: 5rem;
+  border-radius: var(--radius-xl);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-slate-700);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.icon-box-hover {
+  width: 5rem;
+  height: 5rem;
+  border-radius: var(--radius-xl);
+  background-color: rgb(239 246 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+.icon-box-hover:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* ============================================
+   체크리스트 아이템 (Business 등)
+   ============================================ */
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  background-color: var(--color-slate-50);
+  border-radius: var(--radius-lg);
+}
+
+.checklist-item-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-primary);
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.checklist-item-text {
+  color: var(--color-slate-700);
+  font-weight: var(--font-weight-medium);
+}
+
+/* ============================================
+   태그/배지 (Portfolio 등)
+   ============================================ */
+.tag {
+  display: inline-flex;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-slate-100);
+  color: var(--color-slate-600);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: 9999px;
+}
+
+.tag-primary {
+  display: inline-flex;
+  padding: 0.25rem 0.75rem;
+  background-color: var(--color-primary);
+  color: white;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: 9999px;
+}
+
+/* ============================================
+   리스트 아이템 (Support 등)
+   ============================================ */
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-bottom: 1px solid var(--color-slate-100);
+  padding: 1.5rem 1rem;
+  transition: background-color var(--transition-base);
+  cursor: pointer;
+}
+
+.list-item:hover {
+  background-color: var(--color-slate-50);
+}
+
+.list-item-title {
+  font-size: var(--font-size-lg);
+  color: var(--color-slate-900);
+  font-weight: var(--font-weight-medium);
+}
+
+.list-item-meta {
+  color: var(--color-slate-500);
+  font-size: var(--font-size-sm);
+}
+
+/* ============================================
+   연락처 카드 (Support)
+   ============================================ */
+.contact-card {
+  background-color: var(--color-slate-50);
+  padding: 2rem;
+  border-radius: var(--radius-2xl);
+  text-align: center;
+}
+
+.contact-card-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-primary);
+  margin: 0 auto 1rem;
+}
+
+.contact-card-title {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-900);
+  margin-bottom: 0.5rem;
+}
+
+.contact-card-text {
+  color: var(--color-slate-600);
+}
+
+/* ============================================
+   프로세스 스텝 (Recruit)
+   ============================================ */
+.process-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .process-step {
+    flex-direction: row;
+  }
+}
+
+.process-step-circle {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-slate-900);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  transition: background-color var(--transition-slow);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.process-step-circle:hover {
+  background-color: var(--color-primary);
+}
+
+.process-step-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  opacity: 0.8;
+}
+
+.process-step-number {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.process-step-content {
+  flex-grow: 1;
+  width: 100%;
+  background-color: white;
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-2xl);
+  padding: 2rem;
+  transition: all var(--transition-slow);
+}
+
+.process-step-content:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(10, 103, 178, 0.3);
+}
+
+/* ============================================
+   값 카드 (Recruit Culture)
+   ============================================ */
+.value-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value-icon-box {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-2xl);
+  transition: all var(--transition-slow);
+}
+
+.value-icon-box:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-lg);
+}
+
+.value-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+}
+
+.value-divider {
+  width: 1px;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.value-desc {
+  color: var(--color-slate-600);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  padding: 0 1rem;
+  word-break: keep-all;
+}
+
+/* ============================================
+   버튼 스타일 (전체 공통)
+   ============================================ */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-lg);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: rgb(8, 81, 140);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   간격 유틸리티 (전체 공통)
+   ============================================ */
+/* spacing 클래스는 flex container로 사용하거나, 단순 gap만 필요한 경우 space-y-* 사용 */
+.spacing-sm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.spacing-md {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.spacing-lg {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.spacing-xl {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+/* 단순 간격만 필요한 경우 (flex container가 아닌 경우) */
+.space-y-sm > * + * {
+  margin-top: 1rem;
+}
+
+.space-y-md > * + * {
+  margin-top: 2rem;
+}
+
+.space-y-lg > * + * {
+  margin-top: 4rem;
+}
+
+.space-y-xl > * + * {
+  margin-top: 6rem;
+}
+
+/* ============================================
+   테이블 스타일 (Recruit Jobs)
+   ============================================ */
+.table-container {
+  border-top: 2px solid var(--color-slate-900);
+}
+
+.table-row {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--color-slate-200);
+}
+
+@media (min-width: 768px) {
+  .table-row {
+    flex-direction: row;
+  }
+}
+
+.table-header {
+  width: 100%;
+  background-color: var(--color-slate-50);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-900);
+  border-bottom: 1px solid var(--color-slate-200);
+}
+
+@media (min-width: 768px) {
+  .table-header {
+    width: 12rem;
+    border-bottom: 0;
+    border-right: 1px solid var(--color-slate-200);
+  }
+}
+
+.table-content {
+  flex: 1;
+  padding: 1.5rem;
+  background-color: white;
+}
+
+/* ============================================
+   텍스트 헤딩 스타일 (전체 공통)
+   ============================================ */
+.text-heading-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-slate-900);
+}
+
+@media (min-width: 768px) {
+  .text-heading-3xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+.text-heading-3xl-white-pre {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: var(--font-weight-bold);
+  color: white;
+  white-space: pre-line;
+}
+
+@media (min-width: 768px) {
+  .text-heading-3xl-white-pre {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-heading-3xl-white-pre {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+
+
